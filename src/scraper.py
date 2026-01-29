@@ -3,6 +3,7 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
+import sys
 
 from telethon import TelegramClient
 from telethon.tl.types import MessageMediaPhoto

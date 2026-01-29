@@ -27,3 +27,5 @@ models:
         description: "Local file path to the downloaded image."
       - name: source_channel
         description: "Source filename of the JSON data."
+  - name: stg_yolo_detections
+    description: "Staged YOLO detection results cleaned from raw CSV. Casts types and

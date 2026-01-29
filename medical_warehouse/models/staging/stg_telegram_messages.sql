@@ -14,3 +14,5 @@ select
     source_channel::text as source_channel
 from source
 where message_id is not null
+    and channel_name is not null
+    and message_date is not null

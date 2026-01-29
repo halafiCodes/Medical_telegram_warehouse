@@ -1,5 +1,6 @@
 version: 2
 
+
 sources:
   - name: raw
     schema: raw
@@ -22,3 +23,5 @@ sources:
             description: "Business category derived from detections."
           - name: image_name
             description: "Image filename from the raw images folder."
+          - name: source_file
+            description: "Source CSV filename."

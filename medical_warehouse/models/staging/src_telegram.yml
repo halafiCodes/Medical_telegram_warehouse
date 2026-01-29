@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: telegram_messages
+        description: "Raw Telegram messages loaded from JSON."
+        columns:
+          - name: source_channel
+            description: "Channel source for the message."
+      - name: yolo_detections_raw
+        description: "Raw YOLO detection results loaded from CSV."
+        columns:
+          - name: message_id
+            description: "Message ID extracted from image filename."
+          - name: detected_class
+            description: "Top detected class name for the image."
+          - name: confidence_score
+            description: "Confidence score for the detected class."
+          - name: image_category
+            description: "Business category derived from detections."
+          - name: image_name
+            description: "Image filename from the raw images folder."

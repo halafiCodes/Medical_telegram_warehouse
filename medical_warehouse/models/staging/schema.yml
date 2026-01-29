@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_telegram_messages
+    description: "Staged message data cleaned from raw JSON. Casts types and handles nulls."
+    columns:
+      - name: message_id
+        description: "Unique identifier for the telegram message."
+        tests:
+          - unique
+          - not_null
+      - name: channel_name
+        description: "Name of the source Telegram channel (e.g., lobelia4cosmetics)."
+      - name: message_text
+        description: "The content of the message."
+      - name: message_date
+        description: "Timestamp when the message was posted."
+      - name: view_count
+        description: "Number of views (default 0 if null)."
+      - name: forward_count
+        description: "Number of forwards (default 0 if null)."
+      - name: message_length
+        description: "Length of the message text."
+      - name: has_image
+        description: "Boolean indicating if the message contains an image/media."
+      - name: image_path
+        description: "Local file path to the downloaded image."
+      - name: source_channel
+        description: "Source filename of the JSON data."

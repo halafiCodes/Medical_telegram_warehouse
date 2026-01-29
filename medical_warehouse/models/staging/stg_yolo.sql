@@ -10,3 +10,6 @@ select
     image_category::text as image_category,
     image_name::text as image_name
 from raw
+where message_id is not null
+  and detected_class is not null
+    and confidence_score is not null
